@@ -170,26 +170,24 @@ $(document).ready(function() {
 
     arrowsIndex = 0;
 
-    $(".table_slider .slide:eq(0) .sliding_box").each(function() {
+    // $(".table_slider .slide:eq(0) .sliding_box").each(function() {
 
-        parentBlock = $(this).closest(".sliding_table");
+    //     parentBlock = $(this).closest(".sliding_table");
 
-        slidingCell = $(this).find(".cell");
+    //     slidingCell = $(this).find(".cell");
 
-        slidingCell.each(function() {            
+    //     slidingCell.each(function() {            
 
-            arrowsIndex++;
-            slidingCell.attr("data-cell-index", arrowsIndex);
-            arrowsTempl = '<div class="slides_btns_wrapp" data-arrow-index = '+ arrowsIndex +'>'+
-                            '<button type="button" class="slide-prev"></button>'+
-                            '<button type="button" class="slide-next"></button>'+
-                        '</div>';
-            parentBlock.find(".arrows_wrapp").append(arrowsTempl);
-        });        
+    //         arrowsIndex++;
+    //         slidingCell.attr("data-cell-index", arrowsIndex);
+    //         arrowsTempl = '<div class="slides_btns_wrapp" data-arrow-index = '+ arrowsIndex +'>'+
+    //                         '<button type="button" class="slide-prev"></button>'+
+    //                         '<button type="button" class="slide-next"></button>'+
+    //                     '</div>';
+    //         parentBlock.find(".arrows_wrapp").append(arrowsTempl);
+    //     });
 
-        // console.log(i++);
-
-    });
+    // });
 
 });
 
