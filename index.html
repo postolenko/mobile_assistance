@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" >
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<link rel="stylesheet" type="text/css" href="style.css">	
+	<link rel="stylesheet" type="text/css" href="responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
+	<script type="text/javascript" src="vendors/js/jquery.js"></script>
+	<script type="text/javascript" src="slick/slick.js"></script>
+	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="vendors/js/select2.js"></script>
+	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+
+</head>
+
+<body>
+
+	<div class="wrapper">
+
+	<!-- Header -->
+		
+	<header>
+
+		
+								
+	</header>
+
+	<!-- /Header -->
+
+		<!-- Content -->
+			<div class="content">
+
+				<!-- Sliding Table -->
+
+				<section>
+					
+					<div class="row">
+
+						<!-- <h2 class="content__title" id="calc"><span class="line line--left"></span><span class="line line--right"></span>Услуги <br>для физических лиц</h2> -->
+						
+						<div class="sliding_table clearfix">
+							<div class="titles-side left">
+								<div class="table_header cell">
+									<div>
+										<p>Наименование услуги</p>
+									</div>
+								</div>
+								<div>
+									<div class="sliding_box_title cell">
+										<div>
+											<button type="button" class="sliding_btn active" data-slidingbtn-index = "1"></button>
+											<p>Платежный сервис (возможность оплаты подключена)***</p>
+										</div>
+									</div>
+									<div class="sliding_box" data-slidingbox-index = "1">
+										<div class="cell">
+											<div class="inline-blocks">
+												<div class="inline-cell">
+													<p class="imp">Оплата<br /> парковки</p>
+												</div>
+												<div class="inline-cell">
+													<div class="count-box">
+														<button type="button" class="minus-btn"></button>
+														<div class="count-num">
+															<input type="number" placeholder="0">
+														</div>
+														<button type="button" class="plus-btn"></button>
+													</div>
+												</div>
+												<div class="inline-cell">
+													<button type="button" class="reset_btn"></button>
+												</div>
+											</div>
+										</div>
+										<div class="cell">
+											<div class="inline-blocks">
+												<div class="inline-cell">
+													<p class="imp">Оплата штрафов<br /> ГИБДД</p>
+												</div>
+												<div class="inline-cell">
+													<div class="count-box">
+														<button type="button" class="minus-btn"></button>
+														<div class="count-num">
+															<input type="number" placeholder="0">
+														</div>
+														<button type="button" class="plus-btn"></button>
+													</div>
+												</div>
+												<div class="inline-cell">
+													<button type="button" class="reset_btn"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div>
+									<div class="sliding_box_title cell">
+										<div>
+											<button type="button" class="sliding_btn active" data-slidingbtn-index = "2"></button>
+											<p>Платежный сервис (возможность оплаты подключена)***</p>
+										</div>
+									</div>
+									<div class="sliding_box" data-slidingbox-index = "2">
+										<div class="cell">
+											<div class="inline-blocks">
+												<div class="inline-cell">
+													<p class="imp">Оплата<br /> парковки</p>
+												</div>
+												<div class="inline-cell">
+													<div class="count-box">
+														<button type="button" class="minus-btn"></button>
+														<div class="count-num">
+															<input type="number" placeholder="0">
+														</div>
+														<button type="button" class="plus-btn"></button>
+													</div>
+												</div>
+												<div class="inline-cell">
+													<button type="button" class="reset_btn"></button>
+												</div>
+											</div>
+										</div>
+										<div class="cell">
+											<div class="inline-blocks">
+												<div class="inline-cell">
+													<p class="imp">Оплата штрафов<br /> ГИБДД</p>
+												</div>
+												<div class="inline-cell">
+													<div class="count-box">
+														<button type="button" class="minus-btn"></button>
+														<div class="count-num">
+															<input type="number" placeholder="0">
+														</div>
+														<button type="button" class="plus-btn"></button>
+													</div>
+												</div>
+												<div class="inline-cell">
+													<button type="button" class="reset_btn"></button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="total-box">
+									<div class="row-1">
+										<div class="description">
+											<p>Стоимость наших услуг зависит от региона Вашего нахождения. Выберите свой регион — увидите стоимость основных тарифов</p>
+										</div>
+									</div>
+									<div class="row-2">
+										<div class="select_wrapp">
+											<select>
+			                                    <option value="Центральный регион" data-select2-id="4">Центральный регион</option>
+			                                    <option value="Саратов" data-select2-id="6">Саратов</option>
+			                                    <option value="Тюмень" data-select2-id="7">Тюмень</option>
+			                                    <option value="Тула" data-select2-id="8">Тула</option>
+			                                    <option value="Сочи" data-select2-id="9">Сочи</option>
+			                                    <option value="Мурманск" data-select2-id="10">Мурманск</option>
+			                                    <option value="Кемерово" data-select2-id="11">Кемерово</option>
+			                                    <option value="Санкт-Петербург" data-select2-id="12">Санкт-Петербург</option>
+			                                    <option value="Ростов" data-select2-id="13">Ростов</option>
+			                                </select>
+			                            </div>
+									</div>
+								</div>
+							</div>
+							<div class="right">
+								<div class="table_slider clearfix">
+									<div class="slide">
+										<div class="slide_table">
+											<div class="table_header cell">
+												<div>
+													<p>Программа 1</p>
+													<p class="green-1">«Оптима»</p>
+													<p class="green-2">Количество услуг</p>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "1">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "2">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="total-box">
+												<div class="row-1">
+													<p>Цена по программе</p>
+													<p class="green">«Оптима»</p>
+												</div>
+												<div class="row-2">
+													<p>Итоговая сумма:</p>
+													<p class="price">2 500 руб</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slide">
+										<div class="slide_table">
+											<div class="table_header cell">
+												<div>
+													<p>Программа 2</p>
+													<p class="green-1">«Комфорт»</p>
+													<p class="green-2">Количество услуг</p>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "1">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "2">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="total-box">
+												<div class="row-1">
+													<p>Цена по программе</p>
+													<p class="green">«Комфорт»</p>
+												</div>
+												<div class="row-2">
+													<p>Итоговая сумма:</p>
+													<p class="price">2 500 руб</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slide">
+										<div class="slide_table">
+											<div class="table_header cell">
+												<div>
+													<p>Программа 3</p>
+													<p class="green-1">«Привилегия»</p>
+													<p class="green-2">Количество услуг</p>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "1">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "2">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="total-box">
+												<div class="row-1">
+													<p>Цена по программе</p>
+													<p class="green">«Привилегия»</p>
+												</div>
+												<div class="row-2">
+													<p>Итоговая сумма:</p>
+													<p class="price">2 500 руб</p>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="slide">
+										<div class="slide_table">
+											<div class="table_header cell">
+												<div>
+													<p>Программа 4</p>
+													<p class="green-1">«Оптима»</p>
+													<p class="green-2">Количество услуг</p>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "1">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div>
+												<div class="sliding_box_title cell"></div>
+												<div class="sliding_box" data-slidingbox-index = "2">
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+													<div class="cell">
+														<div>
+															<p>Входит в пакет программы</p>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="total-box">
+												<div class="row-1">
+													<p>Цена по программе</p>
+													<p class="green">«Оптима»</p>
+												</div>
+												<div class="row-2">
+													<p>Итоговая сумма:</p>
+													<p class="price">2 500 руб</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						
+						<!-- <div class="info-box">
+							<p>*Услуги предоставляются через мобильное приложение «Мобил Ассистанс»</p>
+							<p>** Территория покрытия представлена сайта <a href="www.mobil-assistanse.ru">www.mobil-assistanse.ru</a></p>
+							<p>*** Территория предоставления услуги представлена на сайте <a href="www.mobil-assistanse.ru">www.mobil-assistanse.ru</a></p>
+						</div> -->
+
+					</div>
+
+				</section>
+
+				<!-- /Sliding Table -->
+
+
+			</div>
+		<!-- /Content -->
+
+		<!-- Footer -->
+
+		<footer>
+
+
+
+		</footer>
+
+		<!-- /Footer -->
+
+		<script src="js/scripts.js"></script>
+		<script src="js/additional_scripts.js"></script>
+	
+	</div>
+
+</body>
+</html>
