@@ -57,7 +57,7 @@ $(document).ready(function() {
         autoplay: false,
         // loop: false,
         // autoplaySpeed: 5000,
-        speed: 1200,
+        speed: 400,
         // infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
