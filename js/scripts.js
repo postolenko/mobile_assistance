@@ -187,7 +187,7 @@ $(document).ready(function() {
             parentBlock.find(".arrows_wrapp").append(arrowsTempl);
         });        
 
-        console.log(i++);
+        // console.log(i++);
 
     });
 
