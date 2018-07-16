@@ -409,6 +409,7 @@ textarea:focus {
 
 .sliding_table .right {
     width: 53%;
+    position: relative;
 }
 
 .sliding_table p {
@@ -788,6 +789,66 @@ textarea:focus {
     line-height: 30px;
     font-weight: bold;
     color: #000000;
+}
+
+.slides_btns_wrapp {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.slides_btns_wrapp .slide-prev {
+    position: absolute;
+    top:0;
+    left: 0;
+}
+
+.slides_btns_wrapp .slide-next {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.slide-prev {
+    display: block;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(221, 83, 15);
+    border-style: solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background-image: url(img/black_arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
+
+.slide-next {
+    display: block;
+    width: 39px;
+    height: 39px;
+    cursor: pointer;
+    border-width: 1px;
+    border-color: rgb(221, 83, 15);
+    border-style: solid;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    background-image: url(img/black_arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 
 /*-- /Sliding Table --*/
