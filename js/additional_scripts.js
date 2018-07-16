@@ -56,9 +56,9 @@ $(document).ready(function() {
         arrows: true,
         autoplay: false,
         // loop: false,
-        autoplaySpeed: 5000,
+        // autoplaySpeed: 5000,
         speed: 1200,
-        infinite: false,
+        // infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
        //  responsive: [
