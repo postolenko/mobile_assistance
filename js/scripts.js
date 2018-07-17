@@ -4,10 +4,21 @@ e = d.documentElement,
 g = d.getElementsByTagName('body')[0],
 bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
+// ------------------
+
+var heightsArr = [];
+var heightElems;
+var heightCells;
+var cellHeight;
+var totalHeight;
+
+// ------------------
+
 $(window).load(function() {
 
-    getSelectWidth();
+    // getSelectWidth();
     getSlidingBtnPosition();
+    getCellsHeight();
     getArrowsPosition();
 
 });
@@ -16,9 +27,19 @@ $(window).resize(function() {
 
     bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
-    getSelectWidth();
+    // getSelectWidth();
     getSlidingBtnPosition();
-    getArrowsPosition();
+    getArrowsPosition();  
+    getCellsHeight();
+    getRightBorderParams();
+
+    $(".titles-side .sliding_box_title").each(function() {
+
+        parentBlock = $(".sliding_table");
+
+        $(this).outerWidth(parentBlock.width());
+
+    });
 
 });
 
@@ -180,30 +201,57 @@ $(document).ready(function() {
 
     });
 
-    // var cellsRowCount = 0;
-
     var arrowsTempl;
     var slidingCell;
 
     arrowsIndex = 0;
 
-    $(".table_slider .slide:eq(0) .sliding_box").each(function() {
+    $(".sliding_table").each(function() {
 
-        parentBlock = $(this).closest(".sliding_table");
+        parentBlock = $(this);
 
-        slidingCell = $(this).find(".cell");
+        var tableSlider = $(this).find(".table_slider");
 
-        slidingCell.each(function() {
+        slidingBox = tableSlider.find(".slide:eq(0) .sliding_box");
 
-            arrowsIndex++;
-            $(this).attr("data-cell-index", arrowsIndex);
-            arrowsTempl = '<div class="slides_btns_wrapp" data-arrow-index = '+ arrowsIndex +'>'+
-                            '<button type="button" class="slide-prev"></button>'+
-                            '<button type="button" class="slide-next"></button>'+
-                        '</div>';
-            parentBlock.find(".arrows_wrapp").append(arrowsTempl);
+        slidingBox.each(function() {            
+
+            $(this).find(".cell").each(function() {                
+
+                arrowsIndex++;          
+
+                $(this).attr("data-cell-index", arrowsIndex);
+
+                arrowsTempl = '<div class="slides_btns_wrapp" data-arrow-index = '+ arrowsIndex +'>'+
+                                '<button type="button" class="slide-prev"></button>'+
+                                '<button type="button" class="slide-next"></button>'+
+                              '</div>';
+
+                parentBlock.find(".arrows_wrapp").append(arrowsTempl);
+
+            });
 
         });
+
+    });
+
+    $(".titles-side .sliding_box_title").each(function() {
+
+        parentBlock = $(".sliding_table");
+
+        $(this).outerWidth(parentBlock.width());
+
+    });
+
+    $(".titles-side .cell").each(function() {
+
+        $(this).append("<span class='right-border'></span>");
+
+        $(this).find(".right-border").height($(this).outerHeight());
+
+        var rightCoord = $(this).closest(".sliding_table").offset().left + $(this).closest(".sliding_table").width();
+
+        $(this).find(".right-border").offset({left: rightCoord});
 
     });
 
@@ -259,6 +307,56 @@ function getSlidingBtnPosition() {
         // console.log(rightCoord);
 
         $(this).offset({left: rightCoord});
+
+    });
+
+}
+
+function getCellsHeight() {
+
+    $(".sliding_table [data-heightel-index]").css({"height" : "auto"});
+
+    $(".sliding_table").each(function() {
+
+        parentBlock = $(this);
+
+        heightElems = $(this).find(".titles-side [data-heightel-index]");
+
+        heightElems.each(function() {
+
+            indexAttr = $(this).attr('data-heightel-index');
+
+            heightCells =  parentBlock.find("[data-heightel-index = '"+ indexAttr +"']");
+
+            heightsArr = [];
+
+            heightCells.each(function() {
+
+                cellHeight = $(this).outerHeight();
+
+                heightsArr.push(cellHeight);
+
+                totalHeight = Math.max.apply(null, heightsArr);
+
+            });
+
+            parentBlock.find("[data-heightel-index = '"+ indexAttr +"']").outerHeight(totalHeight);
+
+        });
+
+    });
+
+}
+
+function getRightBorderParams() {
+
+    $(".titles-side .cell").each(function() {
+
+        $(this).find(".right-border").height($(this).outerHeight());
+
+        var rightCoord = $(this).closest(".sliding_table").offset().left + $(this).closest(".sliding_table").width();
+
+        $(this).find(".right-border").offset({left: rightCoord});
 
     });
 

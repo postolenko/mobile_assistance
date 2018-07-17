@@ -61,40 +61,39 @@ $(document).ready(function() {
         // infinite: false,
         slidesToShow: 3,
         slidesToScroll: 1,
-       //  responsive: [
-	      //   {
-	      //     breakpoint: 1024,
-	      //     settings: {
-	      //       slidesToShow: 3,
-	      //       slidesToScroll: 1,
-	      //     }
-	      //   },
-	      //   {
-	      //     breakpoint: 680,
-	      //     settings: {
-	      //       slidesToShow: 2,
-	      //       slidesToScroll: 1
-	      //     }
-	      //   },
-	      //   {
-	      //     breakpoint: 400,
-	      //     settings: {
-	      //       slidesToShow: 1,
-	      //       slidesToScroll: 1
-	      //     }
-	      //   }
-	      // ]
+        responsive: [
+	        {
+	          breakpoint: 1124,
+	          settings: {
+	            slidesToShow: 2,
+	            slidesToScroll: 1,
+	          }
+	        },
+	        {
+	          breakpoint: 680,
+	          settings: {
+	            slidesToShow: 2,
+	            slidesToScroll: 1
+	          }
+	        },
+	        {
+	          breakpoint: 640,
+	          settings: {
+	            slidesToShow: 1,
+	            slidesToScroll: 1
+	          }
+	        }
+	      ]
 	    });
 	
 
 	$(".slide-prev").click(function() {
-		$(".slide-prev").closest(".table_slider_wrapp").find(".table_slider .slick-prev").trigger('click');
+		$(this).closest(".table_slider_wrapp").find(".table_slider .slick-prev").trigger('click');
 
 	});
 
 	$(".slide-next").click(function() {
-		$(".slide-next").closest(".table_slider_wrapp").find(".table_slider .slick-next").trigger('click');
-
+		$(this).closest(".table_slider_wrapp").find(".table_slider .slick-next").trigger('click');
 	});
 
 });
