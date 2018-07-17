@@ -205,6 +205,7 @@ $(document).ready(function() {
     var slidingCell;
 
     arrowsIndex = 0;
+    var indexCell;
 
     $(".sliding_table").each(function() {
 
@@ -214,13 +215,17 @@ $(document).ready(function() {
 
         slidingBox = tableSlider.find(".slide:eq(0) .sliding_box");
 
-        slidingBox.each(function() {            
+        slidingBox.each(function() {
 
-            $(this).find(".cell").each(function() {                
+            $(this).find(".cell").each(function() {
 
-                arrowsIndex++;          
+                arrowsIndex++;
 
-                $(this).attr("data-cell-index", arrowsIndex);
+                var indexCell = $(this).attr("data-heightel-index");
+
+                var slideCell = $(this).closest(".table_slider").find(".slide .cell[data-heightel-index = '"+ indexCell +"']");
+
+                slideCell.attr("data-cell-index", arrowsIndex);
 
                 arrowsTempl = '<div class="slides_btns_wrapp" data-arrow-index = '+ arrowsIndex +'>'+
                                 '<button type="button" class="slide-prev"></button>'+
@@ -234,6 +239,41 @@ $(document).ready(function() {
         });
 
     });
+
+    // var slidingArrows;
+    // var topCoord;
+
+    // $( ".sliding_box .cell" ).bind({
+    //   mouseenter: function() {
+    //     parentBlock = $(".sliding_table");
+    //     topCoord = $(this).offset().top;        
+    //     indexAttr = $(this).attr("data-cell-index");
+    //     slidingArrows = parentBlock.find(".slides_btns_wrapp[data-arrow-index='"+ indexAttr +"']");
+    //     if( slidingArrows.offset().top >= topCoord &&
+    //         slidingArrows.offset().top + $(this).height() <= topCoord + $(this).height() ) {
+
+    //         slidingArrows.css({"opacity" : "1"});
+
+    //     }
+    //     // slidingArrows.css({"display" : "block"});
+        
+    //   },
+    //   mouseleave: function() {
+    //     // parentBlock = $(".sliding_table");
+    //     // topCoord = $(this).offset().top;
+    //     // indexAttr = $(this).attr("data-cell-index");
+    //     // slidingArrows = parentBlock.find(".slides_btns_wrapp[data-arrow-index='"+ indexAttr +"']");
+    //     // slidingArrows.css({"display" : "none"});
+    //     slidingArrows.css({"opacity" : "0"});
+
+    //     // if( slidingArrows.offset().top < topCoord &&
+    //     //     slidingArrows.offset().top + $(this).height() > topCoord + $(this).height() ) {
+
+    //     //     slidingArrows.css({"opacity" : "0"});
+
+    //     // }
+    //   }
+    // });
 
     $(".titles-side .sliding_box_title").each(function() {
 
