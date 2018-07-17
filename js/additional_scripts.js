@@ -85,6 +85,17 @@ $(document).ready(function() {
 	      //   }
 	      // ]
 	    });
+	
+
+	$(".slide-prev").click(function() {
+		$(".slide-prev").closest(".table_slider_wrapp").find(".table_slider .slick-prev").trigger('click');
+
+	});
+
+	$(".slide-next").click(function() {
+		$(".slide-next").closest(".table_slider_wrapp").find(".table_slider .slick-next").trigger('click');
+
+	});
 
 });
 
