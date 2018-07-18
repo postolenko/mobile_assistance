@@ -124,7 +124,7 @@ $(document).ready(function() {
 
     });
 
-    $(".sliding_btn").each(function() {
+    $(".sliding_box_title").each(function() {
 
         var slidingBtnIndex = $(this).attr("data-slidingbtn-index");
         parentBlock = $(this).closest(".sliding_table");
@@ -136,8 +136,11 @@ $(document).ready(function() {
                 "display" : "block"
             });
 
+            // $(this).addClass("active");
+            // $(this).closest(".sliding_box_title").addClass("active");
+
             $(this).addClass("active");
-            $(this).closest(".sliding_box_title").addClass("active");
+            $(this).find(".sliding_btn").addClass("active");
 
         } else {
 
@@ -145,8 +148,11 @@ $(document).ready(function() {
                 "display" : "none"
             });
 
+            // $(this).removeClass("active");
+            // $(this).closest(".sliding_box_title").removeClass("active");
+
             $(this).removeClass("active");
-            $(this).closest(".sliding_box_title").removeClass("active");
+            $(this).find(".sliding_btn").removeClass("active");
 
         }
 
@@ -158,7 +164,7 @@ $(document).ready(function() {
 
     // });
 
-    $(".sliding_btn").click(function(e) {
+    $(".titles-side .sliding_box_title").click(function(e) {
 
         var slidingBtnIndex = $(this).attr("data-slidingbtn-index");
         parentBlock = $(this).closest(".sliding_table");
@@ -167,8 +173,9 @@ $(document).ready(function() {
 
         if( $(this).hasClass("active") ) {     
 
+            // $(this).removeClass("active");
             $(this).removeClass("active");
-            $(this).closest(".sliding_box_title").removeClass("active");
+            $(this).find(".sliding_btn").removeClass("active");
 
             slidingCell.each( function() {
 
@@ -190,7 +197,8 @@ $(document).ready(function() {
             });
 
             $(this).addClass("active");
-            $(this).closest(".sliding_box_title").addClass("active");
+            $(this).find(".sliding_btn").addClass("active");
+            // $(this).closest(".sliding_box_title").addClass("active");
 
             slidingCell.each( function() {
 

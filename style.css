@@ -513,7 +513,7 @@ textarea:focus {
     height: 39px;
     cursor: pointer;
     border-width: 1px;
-    border-color: rgb(221, 83, 15);
+    border-color: rgb(0, 0, 0);
     border-style: solid;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -525,6 +525,20 @@ textarea:focus {
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
     transform: rotate(-90deg);
+}
+
+.sliding_btn:link,
+.sliding_btn:visited {
+    border-color: rgb(0, 0, 0);
+}
+
+.sliding_btn.active,
+.sliding_btn:active {
+    border-color: rgb(221, 83, 15);
+}
+
+.sliding_btn:hover {
+    border-color: rgb(221, 83, 15);
 }
 
 .sliding_box_title .sliding_btn {
