@@ -20,6 +20,7 @@ $(window).load(function() {
     getSlidingBtnPosition();
     getCellsHeight();
     getArrowsPosition();
+    getRightBorderParams();
 
 });
 
