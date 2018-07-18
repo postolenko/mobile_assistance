@@ -205,6 +205,8 @@ $(document).ready(function() {
 
         }
 
+        getRightBorderParams();
+
     });
 
     var arrowsTempl;
