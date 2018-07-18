@@ -152,6 +152,12 @@ $(document).ready(function() {
 
     });
 
+    // $(".sliding_box_title").click(function() {
+
+    //     $(this).find(".sliding_btn").trigger('click');
+
+    // });
+
     $(".sliding_btn").click(function(e) {
 
         var slidingBtnIndex = $(this).attr("data-slidingbtn-index");
@@ -159,7 +165,7 @@ $(document).ready(function() {
         var slidingBox = parentBlock.find(".sliding_box[data-slidingbox-index = '"+ slidingBtnIndex +"']");
         slidingCell = slidingBox.find(".cell");
 
-        if( $(this).hasClass("active") ) {            
+        if( $(this).hasClass("active") ) {     
 
             $(this).removeClass("active");
             $(this).closest(".sliding_box_title").removeClass("active");
@@ -197,7 +203,7 @@ $(document).ready(function() {
 
             getArrowsPosition();
 
-        }        
+        }
 
     });
 

@@ -1,7 +1,7 @@
 @media only screen and (max-width: 1280px) {
 
 	.row {
-		padding: 0 3%;
+		padding: 0 2%;
 	}
 
 	/*.sliding_table .left {
@@ -74,6 +74,14 @@
 	    line-height: 27px;
 	}
 
+	.count-box {
+	    height: 31px;
+	}
+
+	.count-num {
+	    height: 29px;
+	}
+
 	.count-num input {
 	    height: 29px;
 	    font-size: 18px;
@@ -97,7 +105,7 @@
 	}
 
 	.table_slider .slick-arrow {
-	    bottom: -25px;
+		bottom: 81px;
 	}
 
 	.total-box .row-2 p {
@@ -108,6 +116,10 @@
 	.total-box p.price {
 	    font-size: 19px;
 	    line-height: 22px;
+	}
+
+	.slides_btns_wrapp button {
+	    display: none !important;
 	}
 
 }
@@ -122,9 +134,13 @@
 	    width: 45%;
 	}
 
+	.sliding_box_title .sliding_btn {
+	    margin: -16px 0 0 0;
+	}
+
 	.sliding_btn {
-	    width: 34px;
-	    height: 34px;
+	    width: 32px;
+	    height: 32px;
 	}
 
 	.titles-side .table_header p {
@@ -169,6 +185,11 @@
 	    padding: 5px 8px;
 	}
 
+	.sliding_btn {
+	    width: 29px;
+	    height: 29px;
+	}
+
 	.total-box .row-1 {
 	    padding: 10px 8px 10px 8px;
 	}
@@ -187,10 +208,43 @@
 
 	.count-box {
 	    max-width: 82px;
+	    height: 25px;
 	}
 
 	.reset_btn {
 	    width: 23px;
+	}
+
+/*	.count-box {
+	    height: 31px;
+	}*/
+
+	.count-num {
+	    height: 23px;
+	}
+
+	.count-num input {
+	    height: 23px;
+	    font-size: 14px;
+	    line-height: 18px;
+	}
+
+	.count-box button {
+	    width: 25px;
+	    height: 23px;
+	}
+
+	.plus-btn:before {
+	    line-height: 21px;
+	}
+
+	.minus-btn:before {
+	    line-height: 21px;
+	}
+
+	.reset_btn {
+		width: 26px;
+		height: 25px;
 	}
 	
 }
