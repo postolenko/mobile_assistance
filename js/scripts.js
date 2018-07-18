@@ -215,6 +215,11 @@ $(document).ready(function() {
 
         getRightBorderParams();
 
+        $(".titles-side .sliding_box_title").each(function() {
+            parentBlock = $(".sliding_table");
+            $(this).outerWidth(parentBlock.width());
+        });
+
     });
 
     var arrowsTempl;
